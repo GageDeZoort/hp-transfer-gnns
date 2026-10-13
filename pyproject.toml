@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gnn-transfer"
+version = "0.1.0"
+description = "Hyperparameter transfer parameterization for residual GCNs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "J. DeZoort" }]
+dependencies = [
+  "torch>=2.0",
+  "torch-geometric>=2.4",
+  "numpy",
+]
+
+[project.optional-dependencies]
+colab = ["matplotlib", "tqdm"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
